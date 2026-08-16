@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Өсөлт — хүүхдийн хөгжлийн систем
 
-## Getting Started
+Цэцэрлэгийн багш хүүхдийн өдөр тутмын хөгжлийг 7 чиглэлээр ажиглаж, бүтээлийн зураг хавсарган, ахицыг хугацаагаар харьцуулж, тайлан гаргах responsive веб систем.
 
-First, run the development server:
+## Үндсэн боломж
+
+- Supabase Auth ашигласан багшийн бүртгэл, нэвтрэлт
+- Багшийн нэр, цэцэрлэг, бүлгийн анхны тохиргоо
+- Олон бүлэг болон хүүхдийн бүртгэл
+- Хүүхдийн төрсөн огноо, хаяг, эрүүл мэнд, эцэг эх/асран хамгаалагчийн мэдээлэл
+- Хэл яриа, тоо тоолол, хөдөлгөөн ба эрүүл мэнд, нийгэм ба сэтгэл хөдлөл, зураг урлал, ерөнхий хөгжил, байгаль ба нийгмийн орчны ажиглалт
+- Гар утасны камераар шууд зураг авах болон компьютер/утаснаас зураг сонгох
+- 7 хоног, сар, улирал, жилийн ахицын график
+- Сар, улирал, жилийн бичгэн дүгнэлт
+- Хэвлэх/PDF болон CSV тайлан
+- Багш тус бүрийн өгөгдлийг тусгаарласан RLS хамгаалалт, хувийн Storage bucket
+
+## Локал ажиллуулах
 
 ```bash
+npm ci
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`.env.local` файлд Supabase project URL болон publishable key-г оруулна.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Өгөгдлийн сан
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`supabase/migrations` дотор хүснэгт, индекс, RLS policy, Data API grant болон `child-work` хувийн Storage bucket-ийн migration хадгалагдана.
 
-## Learn More
+## Шалгалт
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+npm run build
+```
