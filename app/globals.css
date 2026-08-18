@@ -455,7 +455,7 @@ input:focus, select:focus, textarea:focus { border-color: #9677e9 !important; bo
 .guardian-access-fab { position: fixed; z-index: 35; right: 24px; bottom: 24px; display: flex; min-height: 50px; padding: 0 18px; align-items: center; gap: 9px; border: 0; border-radius: 15px; color: #fff; background: linear-gradient(135deg,#ef739f,#8a5ce1); box-shadow: 0 15px 35px rgba(104,67,180,.3); font-weight: 850; cursor: pointer; }
 .guardian-access-fab svg { width: 19px; }
 .guardian-access-backdrop { position: fixed; z-index: 150; inset: 0; display: grid; padding: 20px; place-items: center; background: rgba(28,22,48,.55); backdrop-filter: blur(6px); }
-.guardian-access-modal { position: relative; width: min(100%,500px); padding: 38px; border-radius: 26px; background: #fff; box-shadow: 0 30px 80px rgba(24,15,55,.25); }
+.guardian-access-modal { position: relative; overflow-y: auto; overscroll-behavior: contain; width: min(100%,500px); max-height: calc(100vh - 40px); padding: 38px; border-radius: 26px; background: #fff; box-shadow: 0 30px 80px rgba(24,15,55,.25); scrollbar-width: thin; scrollbar-color: #cfc4ed transparent; }
 .guardian-modal-close { position: absolute; top: 17px; right: 17px; display: grid; width: 38px; height: 38px; border: 0; border-radius: 11px; place-items: center; color: #727b92; background: #f5f4f9; cursor: pointer; }
 .guardian-modal-close svg { width: 19px; }
 .guardian-modal-icon { display: grid; width: 58px; height: 58px; margin-bottom: 18px; border-radius: 18px; place-items: center; color: #7d59dc; background: #f0eaff; }
@@ -638,7 +638,8 @@ input:focus, select:focus, textarea:focus { border-color: #9677e9 !important; bo
   .role-submit { min-height: 56px; }
   .guardian-access-fab { right: 14px; bottom: 14px; width: 52px; padding: 0; justify-content: center; border-radius: 50%; }
   .guardian-access-fab span { display: none; }
-  .guardian-access-modal { padding: 30px 20px 22px; }
+  .guardian-access-backdrop { padding: 10px; align-items: flex-end; }
+  .guardian-access-modal { max-height: calc(100vh - 20px); padding: 30px 20px 22px; border-radius: 22px 22px 14px 14px; }
   .guardian-home, .guardian-page { padding: 20px 15px 55px; }
   .guardian-topbar > div span { display: none; }
   .guardian-child-pill { max-width: 150px; overflow: hidden; font-size: 11px !important; text-overflow: ellipsis; white-space: nowrap; }
