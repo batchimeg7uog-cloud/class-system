@@ -1,5 +1,5 @@
-import KindergartenApp from "@/components/kindergarten-app";
+import RoleGateway from "@/components/role-gateway";
 
 export default function Home() {
-  return <KindergartenApp />;
+  return <RoleGateway />;
 }
